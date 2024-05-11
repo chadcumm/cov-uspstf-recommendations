@@ -7,11 +7,11 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class WebServiceService {
-  private url = `https://data.uspreventiveservicestaskforce.org/api/json?key=${environment.apiKey}`;
+  private url = `https://1data.uspreventiveservicestaskforce.org/api/json?key=${environment.apiKey}`;
 
   constructor(private http: HttpClient) { }
 
-  getJsonData(): Observable<any> {
+  getRecData(): Observable<any> {
     return this.http.get<any>(this.url);
   }
 }

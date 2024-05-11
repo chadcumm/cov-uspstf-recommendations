@@ -35,7 +35,7 @@ export class RecTableComponent implements AfterViewInit{
     expandedElement: any | null;
 
     ngOnInit() {
-      this.dataSubscription = this.webService.getJsonData().subscribe(
+      this.dataSubscription = this.webService.getRecData().subscribe(
         data => {
           this.data = new MatTableDataSource(data.specificRecommendations);
           //this.data.sort = this.sort;
