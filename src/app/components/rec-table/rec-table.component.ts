@@ -20,6 +20,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class RecTableComponent implements AfterViewInit{
 
+
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
   @ViewChild(MatSort) sort: MatSort | undefined;
 
@@ -59,5 +60,9 @@ export class RecTableComponent implements AfterViewInit{
         this.data.sort = this.sort;
       }
     }
+
+    handleButtonClick(_t53: any) {
+      throw new Error('Method not implemented.');
+      }
 
 }
