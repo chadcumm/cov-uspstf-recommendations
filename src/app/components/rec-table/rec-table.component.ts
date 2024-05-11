@@ -6,6 +6,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 
 import {animate, state, style, transition, trigger} from '@angular/animations';
+
+
 @Component({
   selector: 'app-rec-table',
   templateUrl: './rec-table.component.html',
@@ -18,6 +20,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     ]),
   ],
 })
+
+
 export class RecTableComponent implements AfterViewInit{
 
 

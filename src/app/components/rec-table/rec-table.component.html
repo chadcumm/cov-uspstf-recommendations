@@ -24,12 +24,28 @@
     <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplayWithExpand.length">
       <div class="example-element-detail"
            [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-        <div class="example-element-description">
-          {{element.text}}
-          <span class="example-element-description-attribution">{{element.general}}</span>
-          <!-- Add your mat-raised-button here -->
-          <button mat-raised-button (click)="handleButtonClick(element)">Button Text</button>
-        </div>
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile colspan="3" rowspan="1" class="left-align">
+            {{element.text}}
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" rowspan="2" class="right-align">
+            <table>
+              <tr>
+                <td>
+                  <button mat-raised-button (click)="handleButtonClick(element)">Order Text A</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button mat-raised-button (click)="handleButtonClick(element)">Order Text B</button>
+                </td>
+              </tr>
+            </table>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="2" rowspan="1" class="left-align">
+            {{element.general}}
+          </mat-grid-tile>
+        </mat-grid-list>
       </div>
     </td>
   </ng-container>
